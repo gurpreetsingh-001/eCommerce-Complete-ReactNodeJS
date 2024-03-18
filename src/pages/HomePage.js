@@ -5,29 +5,29 @@ import Swiper from 'swiper';
 export default function HomePage() {
     useEffect(() => {
         AOS.init();
-        const elements = document.querySelectorAll('[data-anime]');
-        elements.forEach((element) => {
-          const animationData = JSON.parse(element.getAttribute('data-anime'));
-          applyAnimation(element, animationData);
-        });
+        // const elements = document.querySelectorAll('[data-anime]');
+        // elements.forEach((element) => {
+        //   const animationData = JSON.parse(element.getAttribute('data-anime'));
+        //   applyAnimation(element, animationData);
+        // });
       }, []);
     
-      const applyAnimation = (element, animationData) => {
-        const { opacity, translateY, rotateX, staggervalue, easing, duration, delay } = animationData;
+    //   const applyAnimation = (element, animationData) => {
+    //     const { opacity, translateY, rotateX, staggervalue, easing, duration, delay } = animationData;
     
-        // Set initial styles
-        element.style.opacity = opacity ? opacity[0] : 1;
-        element.style.transform = translateY ? `translateY(${translateY[0]}px)` : '';
-        element.style.transform = rotateX ? `rotateX(${rotateX[0]}deg)` : '';
+    //     // Set initial styles
+    //     element.style.opacity = opacity ? opacity[0] : 1;
+    //     element.style.transform = translateY ? `translateY(${translateY[0]}px)` : '';
+    //     element.style.transform = rotateX ? `rotateX(${rotateX[0]}deg)` : '';
     
-        // Apply animation after delay
-        setTimeout(() => {
-          element.style.transition = `opacity ${duration}ms ${easing} ${delay}ms, transform ${duration}ms ${easing} ${delay}ms`;
-          element.style.opacity = opacity ? opacity[1] : 1;
-          element.style.transform = translateY ? `translateY(${translateY[1]}px)` : '';
-          element.style.transform = rotateX ? `rotateX(${rotateX[1]}deg)` : '';
-        }, delay);
-      };
+    //     // Apply animation after delay
+    //     setTimeout(() => {
+    //       element.style.transition = `opacity ${duration}ms ${easing} ${delay}ms, transform ${duration}ms ${easing} ${delay}ms`;
+    //       element.style.opacity = opacity ? opacity[1] : 1;
+    //       element.style.transform = translateY ? `translateY(${translateY[1]}px)` : '';
+    //       element.style.transform = rotateX ? `rotateX(${rotateX[1]}deg)` : '';
+    //     }, delay);
+    //   };
     return (
 
     
@@ -72,8 +72,7 @@ export default function HomePage() {
                             </Link>
                         </div>
                         <div className="col-auto col-xxl-6 col-lg-8 menu-order">
-                            <button className="navbar-toggler float-end" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                            <button className="navbar-toggler float-end" type="button"  aria-controls="navbarNav" aria-label="Toggle navigation">
                                 <span className="navbar-toggler-line"></span>
                                 <span className="navbar-toggler-line"></span>
                                 <span className="navbar-toggler-line"></span>
@@ -87,7 +86,7 @@ export default function HomePage() {
                                     <li className="nav-item dropdown submenu">
                                         <Link to="demo-fashion-store-shop.html" className="nav-link">Shop</Link>
                                         <i className="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1"
-                                            role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                            role="button"  aria-expanded="false"></i>
                                         <div className="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink1">
                                             <div className="d-lg-flex mega-menu m-auto flex-column">
                                                 <div
@@ -164,7 +163,7 @@ export default function HomePage() {
                                     <li className="nav-item dropdown submenu">
                                         <Link to="demo-fashion-store-collection.html" className="nav-link">Collection</Link>
                                         <i className="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink2"
-                                            role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                            role="button"  aria-expanded="false"></i>
                                         <div className="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink2">
                                             <div className="d-lg-flex mega-menu m-auto flex-column">
                                                 <div
@@ -272,7 +271,7 @@ export default function HomePage() {
                                     <li className="nav-item dropdown simple-dropdown">
                                         <Link to="#" className="nav-link">Pages</Link>
                                         <i className="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink3"
-                                            role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                            role="button" aria-expanded="false"></i>
                                         <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
                                             <li><Link to="demo-fashion-store-about.html">About</Link></li>
                                             <li><Link to="demo-fashion-store-faq.html">Faq</Link></li>
@@ -525,8 +524,7 @@ export default function HomePage() {
 
     <section className="half-section">
         <div className="container">
-            <div className="row row-cols-1 row-cols-xl-4 row-cols-lg-4 row-cols-md-2 row-cols-sm-2"
-             data-anime='{ "opacity": [0, 1], "translateY": [50, 0], "easing": "easeOutQuad", "duration": 500, "delay": 300 }' >
+            <div className="row row-cols-1 row-cols-xl-4 row-cols-lg-4 row-cols-md-2 row-cols-sm-2">
 
                 <div className="col icon-with-text-style-01 md-mb-35px">
                     <div className="feature-box feature-box-left-icon-middle last-paragraph-no-margin">
